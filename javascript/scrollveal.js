@@ -15,7 +15,7 @@ ScrollReveal().reveal(".hero-title", {
 ScrollReveal().reveal(".name", {
   ...defaultProps,
   distance: "0px",
-  delay: 700,
+  delay: 500,
   scale: 0,
 });
 ScrollReveal().reveal(".hero-cta", {
@@ -51,13 +51,13 @@ ScrollReveal().reveal(".about-wrapper__info", {
 /* Projects Section */
 ScrollReveal().reveal(".project-wrapper__text", {
   ...defaultProps,
-  delay: 600,
+  delay: 200,
   origin: window.innerWidth > 768 ? "left" : "bottom",
 });
 
 ScrollReveal().reveal(".project-wrapper__image", {
   ...defaultProps,
-  delay: 600,
+  delay: 400,
   scale: 0.9,
   origin: window.innerWidth > 768 ? "right" : "bottom",
 });

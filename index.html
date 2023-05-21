@@ -1,664 +1,368 @@
-<!doctype html>
+<!-- HELLO
+-
+DevFolio is a minimal, clean, lightweight and fully responsive template for Devlopers!
+Created by Anil Seervi.
+-
+GitHub repo: https://github.com/AnilSeervi/DevFolio
+README: https://github.com/AnilSeervi/DevFolio/blob/master/README.md
+-
+Have fun creating your portfolio on this template!!! -->
+
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Project</title>
-  <meta name="keywords" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
-  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
-  <link rel="stylesheet" href="assets/fonts/flat-icon/flaticon.css">
-  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-<div id="content-wrapper">
-  <header class="header header--bg">
-    <div class="container">
-      <nav class="navbar">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span> 
-          </button>
-          <a class="navbar-brand" href="#">OBELA</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li><a href="#">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">SKILL</a></li> 
-            <li><a href="#">PORTFOLIO</a></li> 
-            <li><a href="#">TEAM</a></li> 
-            <li><a href="#">BLOG</a></li> 
-            <li><a href="#">CONTACT</a></li> 
-          </ul>
-        </div>
-      </nav>
-      <div class="header__content text-center">
-        <span class="header__content__block">HELLO</span>
-        <h1 class="header__content__title">I'M JOHNNY D. DORSCH</h1>
-        <ul class="header__content__sub-title">
-          <li>UI&#47;UX DESIGNER <span class="padding">&#45;</span></li>
-          <li>WEB DEVELOPER <span class="padding">&#45;</span></li>
-          <li>PHOTOGRAPHAR</li>
-        </ul>
-        <a class="header__button" href="#">HAVE PROJECT? LET'S TALK</a>
-      </div>
-      <div class="social-icon pull-right">
-        <ul>
-          <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-          <li><a href="#"><i class="flaticon-twitter-logo"></i></a></li>
-          <li><a href="#"><i class="flaticon-behance-logo"></i></a></li>
-          <li><a href="#"><i class="flaticon-dribbble-logo"></i></a></li>
-        </ul>
-      </div>
+    <!-- Title: add your Portfolio websites's title here -->
+    <title>[Your name here] | Developer</title>
+
+    <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
+    <meta name="keywords" content="[username], [name], skill" />
+
+    <!-- Improve your SEO by adding a small descrption of you -->
+    <meta name="description" content="[Your name here] | Developer" />
+
+    <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
+    <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
+
+    <!-- Add your primary-theme color for the value of content -->
+    <meta name="theme-color" content="#36d1dc" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <!-- Fill content with the URL of this portfolio you'll host -->
+    <meta property="og:url" content="https://devfolio.js.org/" />
+    <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
+    <meta property="og:title" content="[Your name here] | Developer" />
+    <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
+    <meta property="og:description" content="Made using DevFolio Template" />
+    <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
+      so that a thumbnail image of your portfolio is shown while shared on other platform -->
+    <meta
+      property="og:image"
+      content="https://devfolio.js.org/assets/devfolio.png"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <!-- Again fill content attr with the URL of this portfolio you'll host -->
+    <meta property="twitter:url" content="https://devfolio.js.org" />
+    <!-- Recommended to use the same text used within <title> element -->
+    <meta property="twitter:title" content="[Your name here] | Developer" />
+    <!-- short description that shows up while your portfolio is shared -->
+    <meta
+      property="twitter:description"
+      content="Made using DevFolio Template"
+    />
+    <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
+    <meta
+      property="twitter:image"
+      content="https://anilseervi.vercel.app/assets/devfolio.png"
+    />
+
+    <!-- link tags -->
+    <link rel="preload" as="style" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <!-- FontAwesome Icons link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script defer src="./javascript/scrollreveal.min.js"></script>
+    <script
+      defer
+      type="text/javascript"
+      src="./javascript/scrollveal.js"
+    ></script>
+
+    <!-- Remove Google Analytics once you have your portfolio website set-up -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag("js", new Date())
+
+      gtag("config", "UA-122228201-4")
+    </script>
+    <!-- End of Google Analytics -->
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <div id="hero">
+      <section class="container">
+        <h1 class="hero-title">
+          Hi, my name is <span class="text-color-main name">Your Name</span>
+          <br />
+          I'm the Unknown Developer.
+        </h1>
+        <p class="hero-cta">
+          <a class="cta-btn cta-btn--hero" href="#about">Get in touch</a>
+        </p>
+      </section>
+      <a href="#about" class="scroll-down-link" aria-label="scroll-down">
+        <div class="scroll-down"></div
+      ></a>
     </div>
-  </header>
+    <!-- /END Hero Section -->
 
-  <section class="about">
-    <div class="container about__container--narrow">
-      <div class="page-section">
-        <h2 class="page-section__title">ABOUT ME</h2>
-          <img class="page-section__title-style" src="assets/images/title-style.png" alt="">
-          <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-          <div class="row gutters-80">
-            <div class="col-md-4">
-              <div class="about__image">
-                <img src="assets/images/about-me-image.png" alt="">
-              </div>
-            </div>
-            <div class="col-md-8 about__content">
-              <p class="about__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
-              <div class="row row--margin-top">
-                <div class="col-md-4">
-                  <p class="about__bio"><strong>NAME :</strong> Jonny D. Dorsch</p>
-                  <p class="about__bio"><strong>AGE :</strong> 21</p>
-                </div>
-                <div class="col-md-4">
-                  <p class="about__bio"><strong>JOB TITLE :</strong> UI&#47;UX Designer</p>
-                  <p class="about__bio"><strong>LOCATION :</strong> California,USA</p>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4">
-                  <a class="button button--colorful button--margin" href="#">DOWNLOAD CV</a>
-                </div>
-                <div class="col-md-4">
-                  <a class="button button--colorful button--margin" href="#">HIRE ME</a>
-                </div>
-              </div>
-            </div>
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="row about-wrapper">
+          <div class="about-wrapper__image">
+            <img
+              class="img-fluid"
+              src="./assets/profile.png"
+              alt="Profile Image"
+              width="450"
+              height="350"
+            />
           </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="skill skill--bg">
-    <div class="container skill__container--narrow">
-      <div class="page-section">
-        <h2 class="page-section__title page-section__title--white">MY SKILL</h2>
-        <img class="page-section__title-style" src="assets/images/title-style-white.png" alt="">
-        <p class="page-section__paragraph page-section__paragraph--white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <div class="row gutters-60">
-          <div class="col-md-4">
-            <div class="thumbnail text-center">
-              <img src="assets/images/adobe-photoshop.png" alt="">
-              <h4 class="skill__single-part__title">ADOBE PHOTOSHOP</h4>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width:80%;background-color: #7FB7FA;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail text-center">
-              <img src="assets/images/adobe-illustrator.png" alt="">
-              <h4 class="skill__single-part__title">ADOBE PHOTOSHOP</h4>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width:80%;background-color: #FFAC1B;;">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail text-center">
-              <img src="assets/images/adobe-after-effects.png" alt="">
-              <h4 class="skill__single-part__title">ADOBE PHOTOSHOP</h4>
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width:80%;background-color: #C99AFF;">
-                </div>
-              </div>
-            </div>
+          <div class="about-wrapper__info">
+            <p class="about-wrapper__info-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Temporibus quae repellat, ad omnis distinctio velit saepe expedita
+              architecto cumque veritatis adipisci. Sapiente non, saepe hic
+              adipisci doloribus quisquam recusandae et.
+            </p>
+            <p class="about-wrapper__info-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+              obcaecati doloribus qui praesentium quae veniam esse mollitia
+              consequuntur nisi minima quasi et fugit quidem enim recusandae
+              delectus, iusto culpa rerum?
+            </p>
+            <span class="about-wrapper__cta">
+              <a href="#" class="cta-btn cta-btn--resume">View Resume</a>
+            </span>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- /END About Section -->
 
-  <section class="service">
-    <div class="container">
-      <div class="page-section">
-        <h2 class="page-section__title">MY SERVICES</h2>
-        <img class="page-section__title-style" src="assets/images/title-style.png" alt="">
-        <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <div class="row gutters-70">
-          <div class="col-md-4">
-            <div class="thumbnail text-center">
-              <img src="assets/images/logo-design.png" alt="">
-              <h4 class="service__single-section__title">LOGO DESIGN</h4>
-              <p class="service__single-section__paragraph">magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    <!--Projects Section-->
+    <section id="projects">
+      <div class="container">
+        <div class="project-wrapper">
+          <h2 class="section-title dark-blue-text">Projects</h2>
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Project Title</h3>
+              <p class="project-wrapper__text-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
+                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
+                sint saepe nostrum! Enim, perferendis.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >See Live</a
+                >
+                <a href="#" target="_blank" class="cta-btn text-color-main"
+                  >Source Code</a
+                >
+              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail text-center">
-              <img src="assets/images/website-design.png" alt="">
-              <h4 class="service__single-section__title">WEBSITE DESIGN</h4>
-              <p class="service__single-section__paragraph">magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/project.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail text-center">
-              <img src="assets/images/support.png" alt="">
-              <h4 class="service__single-section__title">SUPPORT</h4>
-              <p class="service__single-section__paragraph">magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          </article>
+          <!-- /END Project -->
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Project Title</h3>
+              <p class="project-wrapper__text-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
+                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
+                sint saepe nostrum! Enim, perferendis.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >See Live</a
+                >
+                <a href="#" target="_blank" class="cta-btn text-color-main"
+                  >Source Code</a
+                >
+              </div>
             </div>
-          </div>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/project.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
+
+          <!-- Each .row is a project -->
+          <article class="row">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Project Title</h3>
+              <p class="project-wrapper__text-info">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Deleniti voluptas, sit nam perspiciatis tempore aspernatur ullam
+                necessitatibus impedit repellendus vero sed ipsa eos beatae ab
+                sint saepe nostrum! Enim, perferendis.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >See Live</a
+                >
+                <a href="#" target="_blank" class="cta-btn text-color-main"
+                  >Source Code</a
+                >
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded">
+                  <img
+                    src="./assets/project.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+          <!-- /END Project -->
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- End Projects Section -->
 
-  <section class="overview overview--bg">
-    <div class="container">
-      <div class="page-section">
-        <div class="row gutters-140">
-        <div class="col-xs-6 col-lg-3 overview__single-section">
-          <i class="material-icons">headset_mic</i>
-          <h2 class="overview__single-section__number">220</h2>
-          <p class="overview__single-section__title">Hand to Work</p>
-        </div>
-        <div class="col-xs-6 col-lg-3 overview__single-section">
-          <i class="material-icons">mood</i>
-          <h2 class="overview__single-section__number">530</h2>
-          <p class="overview__single-section__title">Happy Client</p>
-        </div>
-        <div class="col-xs-6 col-lg-3 overview__single-section">
-          <i class="material-icons">assignment_turned_in</i>
-          <h2 class="overview__single-section__number">780</h2>
-          <p class="overview__single-section__title">Finished Project</p>
-        </div>
-        <div class="col-xs-6 col-lg-3 overview__single-section">
-          <i class="material-icons">local_bar</i>
-          <h2 class="overview__single-section__number">970</h2>
-          <p class="overview__single-section__title">Cups of coffe</p>
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-wrapper">
+          <p class="contact-wrapper__text">[Put your call to action here]</p>
+          <a href="#" class="cta-btn cta-btn--resume">Call to Action</a>
         </div>
       </div>
+    </section>
+    <!-- END Contact Section -->
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <a href="#hero" class="back-to-top" aria-label="go back to top">
+          <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+        </a>
+        <div class="social-links">
+          <a
+            href="#!"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="twitter"
+          >
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a
+            href="#!"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="instagram"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href="#!"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="codepen"
+          >
+            <i class="fa-brands fa-codepen"></i>
+          </a>
+          <a
+            href="#!"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="linkedin"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a
+            href="#!"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="github"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+        <hr />
+        <p class="footer__text">
+          &copy; <span id="year"></span> - Template by
+          <a
+            href="https://github.com/AnilSeervi"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Anil Seervi</a
+          >. <br />Made with &hearts;
+        </p>
       </div>
-    </div>
-  </section>
+    </footer>
+    <!-- END Footer Section -->
 
-  <section class="portfolio">
-    <div class="container">
-      <div class="page-section">
-        <h2 class="page-section__title">MY PORTFOLIO</h2>
-        <img class="page-section__title-style" src="assets/images/title-style.png" alt="">
-        <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <div class="portfolio__button-group">
-          <a class="button button--default" data-filter="all" href="#">ALL</a>
-          <a class="button button--default" data-filter=".category-a" href="#">DEVELOPMENT</a>
-          <a class="button button--default" data-filter=".category-b" href="#">DESIGN</a>
-          <a class="button button--default" data-filter=".category-c" href="#">HTML</a>
-          <a class="button button--default" data-filter=".category-d" href="#">JAVA</a>
-        </div>
-        <div class="row gutters-40">
-          <div class="col-md-4">
-            <div class="portfolio__single-section mix category-a category-b category-c" data-order="1">
-              <img class="portfolio__single-section__image img-responsive" src="assets/images/portfolio-1.png" alt="">
-              <div class="portfolio__single-section__overlay">
-                <div class="overlay-content">
-                  <h4>LOGO DESIGN</h4>
-                  <p>Designer</p>
-                </div>
-                <div class="portfolio__single-section__search-icon">
-                  <a href="#"><img src="assets/images/search-icon.png" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="portfolio__single-section mix category-a category-c" data-order="2">
-              <img class="portfolio__single-section__image img-responsive" src="assets/images/portfolio-2.png" alt="">
-              <div class="portfolio__single-section__overlay">
-                <div class="overlay-content">
-                  <h4>WEBSITE DESIGN</h4>
-                  <p>Designer</p>
-                </div>
-                <div class="portfolio__single-section__search-icon">
-                  <a href="#"><img src="assets/images/search-icon.png" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="portfolio__single-section mix category-c" data-order="3">
-              <img class="portfolio__single-section__image img-responsive" src="assets/images/portfolio-3.png" alt="">
-              <div class="portfolio__single-section__overlay">
-                <div class="overlay-content">
-                  <h4>LOGO DESIGN</h4>
-                  <p>Designer</p>
-                </div>
-                <div class="portfolio__single-section__search-icon">
-                  <a href="#"><img src="assets/images/search-icon.png" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row gutters-40">
-          <div class="col-md-4">
-            <div class="portfolio__single-section mix category-b category-d" data-order="4">
-              <img class="portfolio__single-section__image img-responsive" src="assets/images/portfolio-4.png" alt="">
-              <div class="portfolio__single-section__overlay">
-                <div class="overlay-content">
-                  <h4>PHOTOGRAPHY</h4>
-                  <p>photographer</p>
-                </div>
-                <div class="portfolio__single-section__search-icon">
-                  <a href="#"><img src="assets/images/search-icon.png" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="portfolio__single-section mix category-b category-d" data-order="5">
-              <img class="portfolio__single-section__image img-responsive" src="assets/images/portfolio-5.png" alt="">
-              <div class="portfolio__single-section__overlay">
-                <div class="overlay-content">
-                  <h4>WEBSITE DESIGN</h4>
-                  <p>Designer</p>
-                </div>
-                <div class="portfolio__single-section__search-icon">
-                  <a href="#"><img src="assets/images/search-icon.png" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="portfolio__single-section mix category-d" data-order="6">
-              <img class="portfolio__single-section__image img-responsive" src="assets/images/portfolio-6.png" alt="">
-              <div class="portfolio__single-section__overlay">
-                <div class="overlay-content">
-                  <h4>LOGO DESIGN</h4>
-                  <p>Designer</p>
-                </div>
-                <div class="portfolio__single-section__search-icon">
-                  <a href="#"><img src="assets/images/search-icon.png" alt=""></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="slider slider--bg">
-    <div id="myCarousel" class="carousel container slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-
-      <div class="carousel-inner">
-        <div class="item active">
-          <div class="carousel-content">
-            <div class="">
-              <div class="text-center">
-                <img src="assets/images/me.png" alt="">
-                <h4>Michael T. Hill</h4>
-                <h6>Designer</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, </p>
-                <div class="rating">
-                  <ul>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="carousel-content">
-            <div class="">
-              <div class="text-center">
-                <img class="carousel-person-image" src="assets/images/team-2.png" alt="">
-                <h4>Leonard D. Downing</h4>
-                <h6>Photographer</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, </p>
-                <div class="rating">
-                  <ul>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="item">
-          <div class="carousel-content">
-            <div class="">
-              <div class="text-center">
-                <img class="carousel-person-image" src="assets/images/team-3.png" alt="">
-                <h4>Paula R. Mullins</h4>
-                <h6>Designer</h6>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, </p>
-                <div class="rating">
-                  <ul>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                    <li><i class="material-icons">star</i></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="team">
-    <div class="container">
-      <div class="page-section">
-        <h2 class="page-section__title">MY TEAM</h2>
-        <img class="page-section__title-style" src="assets/images/title-style.png" alt="">
-        <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <div class="row gutters-40">
-          <div class="col-md-6 col-lg-3">
-            <div class="thumbnail">
-              <img class="img-responsive" src="assets/images/team-1.png" alt="">
-              <h4 class="team__single-section__name">VIOLET R. PETERS</h4>
-              <p class="team__single-section__title">FOUNDER</p>
-
-              <div class="team__overlay">
-                <div class="team__overlay__content">
-                  <div class="team__single-section--backPage">
-                    <h4 style="padding-left: 0;" class="team__single-section__name">VIOLET R. PETERS</h4>
-                    <p style="padding-left: 0;" class="team__single-section__title">FOUNDER</p>
-                    <p class="team__single-section--backPage__title">Adobe Photoshop <span class="team__single-section--backPage__percent90">90&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:90%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <p class="team__single-section--backPage__title">Adobe Illustrator <span class="team__single-section--backPage__percent80">80&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:80%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <p class="team__single-section--backPage__title">After Effect <span class="team__single-section--backPage__percent70">70&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:70%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <hr style="border: 0;border-bottom: 1px solid #ECEFF1;display:block;padding-top: 45px;">
-                    <div class="social-icons">
-                      <ul>
-                        <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-twitter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-dribbble-logo"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="thumbnail">
-              <img src="assets/images/team-3.png" alt="">
-              <h4 class="team__single-section__name">PAULA R. MULLINS</h4>
-              <p class="team__single-section__title">FOUNDER</p>
-              <div class="team__overlay">
-                <div class="team__overlay__content">
-                  <div class="team__single-section--backPage">
-                    <h4 style="padding-left: 0;" class="team__single-section__name">PAULA R. MULLINS</h4>
-                    <p style="padding-left: 0;" class="team__single-section__title">FOUNDER</p>
-                    <p class="team__single-section--backPage__title">Adobe Photoshop <span class="team__single-section--backPage__percent90">90&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:90%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <p class="team__single-section--backPage__title">Adobe Illustrator <span class="team__single-section--backPage__percent80">80&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:80%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <p class="team__single-section--backPage__title">After Effect <span class="team__single-section--backPage__percent70">70&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:70%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <hr style="border: 0;border-bottom: 1px solid #ECEFF1;display:block;padding-top: 45px;">
-                    <div class="social-icons">
-                      <ul>
-                        <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-twitter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-dribbble-logo"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="thumbnail">
-              <img src="assets/images/team-2.png" alt="">
-              <h4 class="team__single-section__name">LEONARD D. DOWNING</h4>
-              <p class="team__single-section__title">FOUNDER</p>
-              <div class="team__overlay">
-                <div class="team__overlay__content">
-                  <div class="team__single-section--backPage">
-                    <h4 style="padding-left: 0;" class="team__single-section__name">LEONARD D. DOWNING</h4>
-                    <p style="padding-left: 0;" class="team__single-section__title">FOUNDER</p>
-                    <p class="team__single-section--backPage__title">Adobe Photoshop <span class="team__single-section--backPage__percent90">90&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:90%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <p class="team__single-section--backPage__title">Adobe Illustrator <span class="team__single-section--backPage__percent80">80&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:80%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <p class="team__single-section--backPage__title">After Effect <span class="team__single-section--backPage__percent70">70&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:70%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <hr style="border: 0;border-bottom: 1px solid #ECEFF1;display:block;padding-top: 45px;">
-                    <div class="social-icons">
-                      <ul>
-                        <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-twitter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-dribbble-logo"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
-            <div class="thumbnail">
-              <img src="assets/images/team-3.png" alt="">
-              <h4 class="team__single-section__name">PAULA R. MULLINS</h4>
-              <p class="team__single-section__title">FOUNDER</p>
-              <div class="team__overlay">
-                <div class="team__overlay__content">
-                  <div class="team__single-section--backPage">
-                    <h4 style="padding-left: 0;" class="team__single-section__name">PAULA R. MULLINS</h4>
-                    <p style="padding-left: 0;" class="team__single-section__title">FOUNDER</p>
-                    <p class="team__single-section--backPage__title">Adobe Photoshop <span class="team__single-section--backPage__percent90">90&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:90%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <p class="team__single-section--backPage__title">Adobe Illustrator <span class="team__single-section--backPage__percent80">80&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:80%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <p class="team__single-section--backPage__title">After Effect <span class="team__single-section--backPage__percent70">70&#37;</span></p>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width:70%;background-color: #7F56FD;">
-                        <span class="progress-bar--dot-main"></span>
-                        <span class="progress-bar--dot"></span>
-                      </div>
-                    </div>
-                    <hr style="border: 0;border-bottom: 1px solid #ECEFF1;display:block;padding-top: 45px;">
-                    <div class="social-icons">
-                      <ul>
-                        <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-twitter-logo"></i></a></li>
-                        <li><a href="#"><i class="flaticon-dribbble-logo"></i></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="brand-logo brand-logo--bg">
-    <div class="container">
-      <div class="row">
-        <div class="brand-logo__wrapper">
-          <li><img class="img-responsive" src="assets/images/brand-1.png" alt=""></li>
-          <li><img class="img-responsive" src="assets/images/brand-2.png" alt=""></li>
-          <li><img class="img-responsive" src="assets/images/brand-3.png" alt=""></li>
-          <li><img class="img-responsive" src="assets/images/brand-4.png" alt=""></li>
-          <li><img class="img-responsive" src="assets/images/brand-1.png" alt=""></li>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="blog">
-    <div class="container">
-      <div class="page-section">
-        <h2 class="page-section__title">BLOG POST</h2>
-        <img class="page-section__title-style" src="assets/images/title-style.png" alt="">
-        <p class="page-section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <div class="row gutters-40">
-          <div class="col-md-4">
-            <div class="thumbnail text-center">
-              <img class="img-responsive" src="assets/images/blog-1.png" alt="">
-              <p class="blog__single__date">MAY 25 , 2017 </p>
-              <i class="material-icons">comment</i> 5
-              <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
-              <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  Ut enim ad minim veniam <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a></p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail text-center">
-              <img src="assets/images/blog-2.png" alt="">
-              <p class="blog__single__date">MAY 25 , 2017 </p>
-              <i class="material-icons">comment</i> 5
-              <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
-              <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  Ut enim ad minim veniam <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a></p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="thumbnail text-center">
-              <img src="assets/images/blog-3.png" alt="">
-              <p class="blog__single__date">MAY 25 , 2017 </p>
-              <i class="material-icons">comment</i> 5
-              <a href="#"><h4 class="blog__single__title">HEADLINE LATEST WORLD NEWS</h4></a>
-              <p class="blog__single__paragraph">orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  Ut enim ad minim veniam <a href="#"><span class="blog__single__paragraph--read-more">READ MORE...</span></a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer footer--bg">
-    <div class="container text-center">
-      <h1 class="footer__title">OBELA</h1>
-      <ul class="footer__contact-information">
-        <li><a href="tel:5555555555"><i class="material-icons">phone</i> Hotline (+123) 45 67 89 21</a></li>
-        <li><a href="mailto:sshariar458@gmail.com"><i class="material-icons">email</i> sshahriar458@gmail.com</a></li>
-        <li><a href="#"><i class="material-icons">location_on</i> DartThemes address goes here.</a></li>
-      </ul>
-    </div>
-    <hr style="border: 0;border-top: 1px solid #525B60;display:block;margin-top: 40px;">
-    <div class="container text-center">
-      <div class="social-icon">
-        <ul>
-          <li><a href="#"><i class="flaticon-facebook-letter-logo"></i></a></li>
-          <li><a href="#"><i class="flaticon-twitter-logo"></i></a></li>
-          <li><a href="#"><i class="flaticon-behance-logo"></i></a></li>
-          <li><a href="#"><i class="flaticon-dribbble-logo"></i></a></li>
-        </ul>
-      </div>
-      <p class="footer__paragraph">Copyright &copy; 2017 DartThemes , All Rights Reserved.</p>
-    </div>
-  </footer>
-</div>
-  <script src="assets/jquery/jquery-3.2.1.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="js/mixitup.js"></script>
-
-  <script>
-    $('a').click(function(e)
-      {
-        e.preventDefault();
-      });
-
-    // calling mixitup
-    var mixer = mixitup(".portfolio");
-  </script>
-</body>
-</html>  
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear()
+    </script>
+    <script src="./javascript/vanilla-tilt.min.js"></script>
+    <script type="text/javascript" src="./javascript/valtilt.js"></script>
+  </body>
+</html>

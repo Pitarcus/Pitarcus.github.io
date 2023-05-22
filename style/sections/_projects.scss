@@ -43,21 +43,25 @@
 
       &-labels {
         height: fit-content;
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
+        
       }
 
       .label {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         font-weight: 700;
         letter-spacing: 0.025rem;
         font-style: normal;
         text-transform: capitalize;
         color: #0d0049;
+        margin-right: 0.4em;
+        margin-bottom: 0.3em;
+        display: inline-block;
         
-        border-radius: 0.2rem;
-        -webkit-border-radius: 0.15rem;
-        -moz-border-radius: 0.2rem;
-        padding: 0.3rem 0.4rem;
+        border-radius: 0.4rem;
+        -webkit-border-radius: 0.4rem;
+        -moz-border-radius: 0.4rem;
+        padding: 0.3rem 0.5rem;
         border-style: none;
         border-width: 0rem;
         border-color: #EF2D56;
@@ -144,7 +148,7 @@
         outline-style: solid;
         outline-color: rgba(0, 40, 56, 1);
         outline-offset: 0px;
-        border-radius: 20px;
+        border-radius: 15px;
         box-sizing: border-box;
         padding: 0.1%;
 
@@ -157,7 +161,7 @@
           width: 100%;
           height: auto;
           vertical-align: middle;
-          border-radius: 20px;
+          border-radius: 15px;
         }
         @include respond(phone) {
           box-shadow: none;

@@ -62,14 +62,16 @@ ScrollReveal().reveal(".project-wrapper__image", {
   origin: window.innerWidth > 768 ? "right" : "bottom",
 });
 
+ScrollReveal().reveal(".project-wrapper__labels", {
+  ...defaultProps,
+  delay: 500,
+  scale: 0.9,
+  origin: window.innerWidth > 768 ? "right" : "bottom",
+});
+
 /* Contact Section */
 ScrollReveal().reveal(".contact-wrapper", {
   ...defaultProps,
   delay: 600,
 });
 
-ScrollReveal().reveal(".fa", {
-  ...defaultProps,
-  delay: 500,
-  interval: 100,
-});

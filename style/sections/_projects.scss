@@ -41,7 +41,84 @@
         }
       }
 
-      
+      &-labels {
+        height: fit-content;
+        margin-bottom: 1.5rem;
+      }
+
+      .label {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: 0.025rem;
+        font-style: normal;
+        text-transform: capitalize;
+        color: #0d0049;
+        
+        border-radius: 0.2rem;
+        -webkit-border-radius: 0.15rem;
+        -moz-border-radius: 0.2rem;
+        padding: 0.3rem 0.4rem;
+        border-style: none;
+        border-width: 0rem;
+        border-color: #EF2D56;
+        height:fit-content;
+      }
+
+        label.game {
+          background-color: #12fffb;
+        }
+        label.tool {
+          background-color: #24ff3e;
+        }
+        label.unity {
+          color:#d2deff;
+          background-color: #1a1f45;
+        }
+        label.shaders {
+          color:#000615;    
+           
+          background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+          background-size: 1800% 1800%;
+
+          -webkit-animation: rainbow 18s ease infinite;
+          -z-animation: rainbow 18s ease infinite;
+          -o-animation: rainbow 18s ease infinite;
+            animation: rainbow 18s ease infinite;
+        }
+          @-webkit-keyframes rainbow {
+              0%{background-position:0% 82%}
+              50%{background-position:100% 19%}
+              100%{background-position:0% 82%}
+          }
+          @-moz-keyframes rainbow {
+              0%{background-position:0% 82%}
+              50%{background-position:100% 19%}
+              100%{background-position:0% 82%}
+          }
+          @-o-keyframes rainbow {
+              0%{background-position:0% 82%}
+              50%{background-position:100% 19%}
+              100%{background-position:0% 82%}
+          }
+          @keyframes rainbow { 
+              0%{background-position:0% 82%}
+              50%{background-position:100% 19%}
+              100%{background-position:0% 82%}
+          }
+          
+        label.vr {
+          background-color: #ed4a41;
+        }
+        label.sound {
+          background-color: #69d7ff;
+        }
+        label.modelling {
+          background-color: #fce42e;
+        }
+        label.c {
+          color: #d2deff;
+          background-color: #00589D;
+        }
 
       &-info {
         margin-bottom: 1.5rem;

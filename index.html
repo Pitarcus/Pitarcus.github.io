@@ -27,7 +27,7 @@ Have fun creating your portfolio on this template!!! -->
     <meta name="description" content="Marc Pitarch Dos Santos | Game Developer" />
 
     <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
-    <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
+    <link rel="icon" type="image/png" href="./assets/LogoPitarcus_P_transparent_small.png" />
 
     <!-- Add your primary-theme color for the value of content -->
     <meta name="theme-color" content="#00061b" />
@@ -82,13 +82,17 @@ Have fun creating your portfolio on this template!!! -->
       type="text/javascript"
       src="./javascript/scrollveal.js"
     ></script>
+    <script
+      defer
+      src="./javascript/categoryfilter.js"
+    ></script>
   </head>
   <body>
     <!-- Hero Section -->
     <div id="hero">
       <section class="container">
         <h1 class="hero-title">
-          Hi, my name is <span class="text-color-main name">Marc Pitarch Dos Santos</span>
+          Hey, my name is <span class="text-color-main name">Marc Pitarch Dos Santos</span>
           <br />
           I'm a passionate game developer.
         </h1>
@@ -124,13 +128,13 @@ Have fun creating your portfolio on this template!!! -->
             </p>
             <p class="about-wrapper__info-text">
               As a student I have had the chance to create polished games and experiences
-              going through different roles and working with people from different backgrounds.
+              going through different roles and working with people from various backgrounds.
               My main interests are <b>programming, graphics and sound</b>. Below you can find my resume and
-              projects I have been completing in the last years.
+              projects I have been completing in recent years. And <a target="_blank" href="https://pitarcus.itch.io/" color="#9ee7ff" visited="#9effae">here</a> you can peek through all my games!
 
             </p>
             <span class="about-wrapper__cta">
-              <a href="./assets/CV_MarcPitarchDosSantos_gamedev.pdf" class="cta-btn cta-btn--resume">View Resume</a>
+              <a target="_blank" href="./assets/CV_MarcPitarchDosSantos_gamedev.pdf" class="cta-btn cta-btn--resume">View Resume</a>
             </span>
           </div>
         </div>
@@ -144,8 +148,16 @@ Have fun creating your portfolio on this template!!! -->
         <div class="project-wrapper">
           <h2 class="section-title dark-blue-text">Projects</h2>
 
+          <div class="filters"> 
+            <div class="project-wrapper__filters-category">
+              <button type="button" class="project-filter active" data-filter="all">All</button>
+              <button type="button" class="project-filter" data-filter="game">Games</button>
+              <button type="button" class="project-filter" data-filter="tool">Tools</button>
+            </div>
+          </div>
+
           <!-- GRASS -->
-          <article class="row">
+          <article class="row project-item">
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">Grass and dynamic wind - Final Degree Project 2023</h3>
 
@@ -157,7 +169,7 @@ Have fun creating your portfolio on this template!!! -->
                 <label class="label shaders"> Shaders</label>
                 <label class="label vr"><i class="fa-solid fa-vr-cardboard" aria-hidden="true"></i> VR</label>
                 <label class="label sound"><i class="fa-solid fa-headphones" aria-hidden="true"></i> Sound</label>
-                <label class="label modelling"><i class="fa-solid fa-cube" aria-hidden="true"></i> Modelling</label>
+                <label class="label modeling"><i class="fa-solid fa-cube" aria-hidden="true"></i> Modeling</label>
                 <label class="label c"><i class="fa-solid fa-c" aria-hidden="true"></i></label>
                 -->
                 <label class="label tool"><i class="fa fa-wrench" aria-hidden="true"></i> Tool</label>
@@ -167,8 +179,8 @@ Have fun creating your portfolio on this template!!! -->
               
               <p class="project-wrapper__text-info">
                 The final project for my Videogame Design and Development bachelor's. 
-                It features tools for customized rendering of grass, which I used to make similar grass to <i>Breath of the Wild</i>.
-                A fluid simulation based wind system creates dynamic interaction with motors, inspired by <i>God of War</i>.
+                It features tools for customized rendering of grass with the help of <b>compute shaders</b>, which I used to make similar grass to <i>Breath of the Wild</i>.
+                A <b>fluid simulation</b> based wind system creates dynamic interaction with motors, inspired by <i>God of War</i>.
               </p>
               <div class="project-wrapper__text-btns">
                 <!--<a
@@ -203,7 +215,7 @@ Have fun creating your portfolio on this template!!! -->
           <!-- /END Project -->
 
           <!-- EDGE OF TOMORROW -->
-          <article class="row">
+          <article class="row project-item">
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">Edge of Tomorrow VR - 2022</h3>
 
@@ -215,8 +227,8 @@ Have fun creating your portfolio on this template!!! -->
               </div>
 
               <p class="project-wrapper__text-info">
-                During my time at Hanze's Hogeschool in Groningen I got the chance to direct
-                a VR game with a team of 5 people to help the northern police of Groningen raise awareness of knife crime.
+                During my time at Hanze's Hogeschool in Groningen I got the chance to <b>direct and develop
+                a VR game</b> with a team of 5 people to help the northern police of Groningen raise awareness of knife crime.
               </p>
               <div class="project-wrapper__text-btns">
                 <a
@@ -249,7 +261,7 @@ Have fun creating your portfolio on this template!!! -->
           <!-- /END Project -->
 
           <!-- ANCIENT -->
-          <article class="row">
+          <article class="row project-item">
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">ANCIENT - Indie Spain Jam 2022</h3>
 
@@ -262,8 +274,8 @@ Have fun creating your portfolio on this template!!! -->
 
               <p class="project-wrapper__text-info">
                 A team of 6 students of the degree worked remotely on the development of ANCIENT
-                a puzzle sokoban style game. Sound design and implementation using FMOD, music, VFX and
-                game design.
+                a puzzle sokoban style jam game. Sound design and implementation using FMOD, music, VFX and
+                game design. We achieved <b>12th place</b> out of 172 entries!
               </p>
               <div class="project-wrapper__text-btns">
                 <a
@@ -293,7 +305,7 @@ Have fun creating your portfolio on this template!!! -->
           <!-- /END Project -->
 
           <!-- BLUE BLOOD -->
-          <article class="row">
+          <article class="row project-item">
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">Blue Blood - 2022</h3>
 
@@ -302,12 +314,12 @@ Have fun creating your portfolio on this template!!! -->
                 <label class="label unity"> <i class="fa-brands fa-unity" aria-hidden="true"></i> Unity</label>
                 <label class="label shaders"> Shaders</label>
                 <label class="label sound"><i class="fa-solid fa-headphones" aria-hidden="true"></i> Sound</label>
-                <label class="label modelling"><i class="fa-solid fa-cube" aria-hidden="true"></i> Modelling</label>
+                <label class="label modeling"><i class="fa-solid fa-cube" aria-hidden="true"></i> Modeling</label>
               </div>
 
               <p class="project-wrapper__text-info">
-                My biggest game to date, full solo development. Custom character controller,
-                animation, game desing, shaders, sound and music. Originated as a uni project
+                My biggest game to date, <b>full solo development</b>. Custom character controller,
+                animation, game desing, shaders, sound and music. Originated as a university project
                 for the subject Game Engines.
               </p>
               <div class="project-wrapper__text-btns">
@@ -341,7 +353,7 @@ Have fun creating your portfolio on this template!!! -->
           <!-- /END Project -->
 
           <!-- EL FORN DE BABALÀ -->
-          <article class="row">
+          <article class="row project-item">
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">El Forn de Babalà - 2021</h3>
 
@@ -388,7 +400,7 @@ Have fun creating your portfolio on this template!!! -->
           <!-- /END Project -->
 
           <!-- Hen & FOX -->
-          <article class="row">
+          <article class="row project-item">
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">Hen & Fox - 2020</h3>
 
@@ -459,6 +471,15 @@ Have fun creating your portfolio on this template!!! -->
           <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
         </a>
         <div class="social-links">
+          
+          <a
+            href="https://pitarcus.itch.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="itch-io"
+          >
+            <i class="fa-brands fa-itch-io"></i>
+          </a>
           <a
             href="https://twitter.com/pitarcus"
             target="_blank"

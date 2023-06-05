@@ -53,5 +53,28 @@
         text-align: center;
       }
     }
+
+    a :link{
+      color: rgb(0, 196, 183);
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:visited {
+      color: rgb(93, 109, 134);
+      background-color: transparent;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: rgb(0, 244, 167);
+      background-color: transparent;
+      text-decoration: underline; 
+    }
+    
+    a:active {
+      color: rgb(0, 55, 255);
+      background-color: transparent;
+      text-decoration: underline;
+    }
   }
 }

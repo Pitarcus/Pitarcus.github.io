@@ -22,6 +22,71 @@
         margin-bottom: 4rem;
       }
     }
+
+
+    .filters {
+      margin-bottom: 4rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    &__filters-category {
+      width: 100%;
+      align-self: center;
+      padding: 3em;
+    }
+    
+    .project-filter {
+      background-color: transparent;
+      font-size: 2em;
+      font-weight: 700;
+      text-transform: capitalize;
+      margin: 0 12px;
+      color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+      border-radius: 10px;
+      outline-style: solid;
+      outline-offset: 4px;
+      outline-color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+      border: none;
+      cursor: pointer;
+      padding-bottom: 2px;
+      -webkit-transition: all 0.15s ease;
+      transition: all 0.15s ease;
+      
+      &:hover {
+        outline-offset: 8px;
+        outline-color: $secondary-color;
+      }
+      &:active {
+        outline-offset: 12px;
+        transition:0s;
+        transition-timing-function: step-end;
+      }
+
+    }
+    .project-filter.active {
+      color: $secondary-color;
+      outline-style: solid;
+      outline-color: $secondary-color;
+      outline-offset: 8px;
+    }
+
+    .project-item.show{
+      animation: showproject 0.7s cubic-bezier(0.5, 0, 0, 1);
+    }
+
+    @keyframes showproject {
+      from{opacity: 0;}
+      to{opacity: 1;}
+    }
+
+    .project-item.hide{
+      opacity: 0;
+      display: none;
+    }
+
+
+
     &__text {
       width: 100%;
       text-align: left;
@@ -40,7 +105,7 @@
           font-size: 2rem;
         }
       }
-
+      
       &-labels {
         height: fit-content;
         margin-bottom: 2rem;
@@ -90,33 +155,40 @@
             animation: rainbow 18s ease infinite;
         }
           @-webkit-keyframes rainbow {
-              0%{background-position:0% 82%}
+              0%{background-position:0% 82%;
+                color: #000615 #d2deff}
               50%{background-position:100% 19%}
               100%{background-position:0% 82%}
           }
           @-moz-keyframes rainbow {
-              0%{background-position:0% 82%}
+              0%{background-position:0% 82%;
+                color: #000615 #d2deff}
               50%{background-position:100% 19%}
               100%{background-position:0% 82%}
           }
           @-o-keyframes rainbow {
-              0%{background-position:0% 82%}
-              50%{background-position:100% 19%}
+              0%{background-position:0% 82%;
+                color: #000615}
+              50%{background-position:100% 19%;
+                color: #d2deff}
               100%{background-position:0% 82%}
           }
           @keyframes rainbow { 
-              0%{background-position:0% 82%}
-              50%{background-position:100% 19%}
-              100%{background-position:0% 82%}
+            0%{background-position:0% 82%;
+              color: #000615}
+            50%{background-position:100% 19%;
+              color: #d2deff}
+              100%{background-position:0% 82%;
+                color: #000615}
           }
           
         label.vr {
-          background-color: #ed4a41;
+          background-color: #ed4a41; 
         }
         label.sound {
-          background-color: #69d7ff;
+          background-color: #74ff8b;
         }
-        label.modelling {
+        label.modeling {
           background-color: #fce42e;
         }
         label.c {

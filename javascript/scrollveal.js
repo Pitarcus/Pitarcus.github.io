@@ -5,7 +5,19 @@ const defaultProps = {
   duration: 700,
   desktop: true,
   mobile: true,
+  viewfactor:0.5
 };
+
+function updateProjectReveal() {
+  /* Projects Section */
+  ScrollReveal().clean(".project-wrapper__text");
+
+  ScrollReveal().clean(".project-wrapper__image");
+
+  ScrollReveal().clean(".project-wrapper__labels");
+ 
+}
+
 // Hero Section
 ScrollReveal().reveal(".hero-title", {
   ...defaultProps,
@@ -49,6 +61,11 @@ ScrollReveal().reveal(".about-wrapper__info", {
 });
 
 /* Projects Section */
+ScrollReveal().reveal(".project-wrapper__filters-category", {
+  ...defaultProps,
+  delay: 300,
+  origin: window.innerWidth > 768 ? "left" : "bottom",
+});
 ScrollReveal().reveal(".project-wrapper__text", {
   ...defaultProps,
   delay: 200,

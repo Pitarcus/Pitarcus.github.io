@@ -24,15 +24,28 @@
     }
 
     &__image {
+      background-size: contain;
       display: flex;
       height: 100%;
       align-items: center;
       border-radius: 20p;
       justify-content: center;
+      
       img {
         max-width: 350px;
         width: 100%;
         border-radius: 10px;
+        margin-left: 20%;
+        filter: brightness(8%);
+        -webkit-filter: brightness(8%);
+        z-index: 0;
+
+        -webkit-transition: -webkit-filter 200ms linear;
+      }
+
+      img.active {
+        filter: brightness(100%);
+        -webkit-filter: brightness(100%);
       }
 
       @include respond(tab-land) {
@@ -77,4 +90,49 @@
       text-decoration: underline;
     }
   }
+
+  .myface-btn {
+    position: relative;
+    width: fit-content;
+    flex: none;
+    top: 0%;
+    left: -220px;
+   
+    background-color: transparent;
+    text-transform: capitalize;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+    outline-style: solid;
+    outline-offset: 1px;
+
+    color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+    outline-style: solid;
+    outline-color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+
+    &:hover {
+      outline-offset: 5px;
+      outline-color: $secondary-color;
+    }
+
+    &:active {
+      outline-offset: 8px;
+      transition:0s;
+      transition-timing-function: step-end;
+    }
+  }
+  .myface-btn.active{
+    color: transparent;
+    outline-style: solid;
+    outline-color: transparent;
+    outline-offset: 5px;
+
+    &:hover {
+      color: $secondary-color;
+      outline-offset: 5px;
+      outline-color: $secondary-color;
+    }
+  }
+  
 }

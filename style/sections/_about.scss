@@ -40,6 +40,7 @@
         -webkit-filter: brightness(8%);
         z-index: 0;
 
+        transition: filter 200ms linear;
         -webkit-transition: -webkit-filter 200ms linear;
       }
 

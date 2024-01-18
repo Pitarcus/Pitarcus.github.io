@@ -90,7 +90,14 @@ Have fun creating your portfolio on this template!!! -->
       defer
       src="./javascript/imagerevealonclick.js"
     ></script>
+    <script
+      defer
+      src="./javascript/modal.js"
+    ></script>
+    <!-- Import the component -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
   </head>
+
   <body>
     <!-- Hero Section -->
     <div id="hero">
@@ -161,6 +168,106 @@ Have fun creating your portfolio on this template!!! -->
               <button type="button" class="project-filter" data-filter="tool">Tools</button>
             </div>
           </div>
+
+          <!-- Substance Project -->
+          <article class="row project-item">
+            <div class="project-wrapper__text">
+              <h3 class="project-wrapper__text-title">Substance Designer - Learning</h3>
+
+              <div class="project-wrapper__text-labels">
+                <!--
+                <label class="label game"><i class="fa fa-gamepad" aria-hidden="true"></i> Game</label>
+                <label class="label tool"><i class="fa fa-wrench" aria-hidden="true"></i> Tool</label>
+                <label class="label unity"> <i class="fa-brands fa-unity" aria-hidden="true"></i> Unity</label>
+                <label class="label shaders"> Shaders</label>
+                <label class="label vr"><i class="fa-solid fa-vr-cardboard" aria-hidden="true"></i> VR</label>
+                <label class="label sound"><i class="fa-solid fa-headphones" aria-hidden="true"></i> Sound</label>
+                <label class="label modeling"><i class="fa-solid fa-cube" aria-hidden="true"></i> Modeling</label>
+                <label class="label c"><i class="fa-solid fa-c" aria-hidden="true"></i></label>
+                <label class="label tool"><i class="fa fa-wrench" aria-hidden="true"></i> Tool</label>
+                <label class="label unity"> <i class="fa-brands fa-unity" aria-hidden="true"></i> Unity</label>
+                -->
+                <label class="label shaders"> Shaders</label>
+              </div>
+              
+              <p class="project-wrapper__text-info">
+                I am currently learning all the nook and crannies of creating high quality materials and textures in Substance Designer 
+                and Painter. For now I am a beginner but I acknowledge the possibilities of these tools. I have created some
+                materials myself with the help of some tutorials.
+              </p>
+              <div class="project-wrapper__text-btns">
+                <!--<a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="cta-btn cta-btn--hero cta-btn--projects"
+                  >See Live</a
+                >-->
+                <button 
+                target="_blank" 
+                class="cta-btn cta-btn--hero cta-btn--projects substance-textures" >
+                Live preview!
+                </button>
+              </div>
+            </div>
+
+            <div class="project-wrapper__image">
+              <a target="_blank" rel="noopener noreferrer">
+                <div class="thumbnail rounded substance-textures">
+                  <img
+                    src="./assets/substance thumbnail.png"
+                    class="img-fluid"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                  />
+                </div>
+              </a>
+            </div>
+          </article>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            
+            <model-viewer class="model-viewer" 
+              environment-image="./assets/models/environments/spruit_sunrise_2k.hdr"  disable-pan 
+              oncontextmenu="return false;" src="./assets/models/Dirt_ground.glb" 
+              tone-mapping="commerce" shadow-intensity="1" camera-controls touch-action="pan-y" alt="A 3D model showcasing the textures">
+            </model-viewer>
+            <div class="button-scroll-container">
+              <button 
+              id="substance-model-dirt" target="_blank" 
+              class="cta-btn cta-btn--hero cta-btn--projects substance-textures-select" >
+              Dirt
+              </button>
+              <button 
+              id="substance-model-snow" target="_blank" 
+              class="cta-btn cta-btn--hero cta-btn--projects substance-textures-select" >
+              Snow
+              </button>
+              <button 
+              id="substance-model-sand" target="_blank" 
+              class="cta-btn cta-btn--hero cta-btn--projects substance-textures-select" >
+              Sand
+              </button>
+              <button 
+              id="substance-model-jaraflower" target="_blank" 
+              class="cta-btn cta-btn--hero cta-btn--projects substance-textures-select" >
+              Jara Flower
+              </button>
+              <button 
+              id="substance-model-bridge" target="_blank" 
+              class="cta-btn cta-btn--hero cta-btn--projects substance-textures-select" >
+              Bridge
+              </button>
+            </div>
+            <span class="close">&times;</span>
+          </div>
+
+        </div>
+          <!-- /END Project -->
 
           <!-- GRASS -->
           <article class="row project-item">

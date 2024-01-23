@@ -9,3 +9,18 @@
 @import "./sections/contact";
 @import "./sections/hero";
 @import "./sections/projects";
+
+::-webkit-scrollbar {
+    width: 1.3em;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #1ddde8;
+  }
+html{
+    background-color: $light-white
+}

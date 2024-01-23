@@ -197,6 +197,10 @@
           background-color: #00589D;
         }
 
+        label.other {
+          background-color: #d747ff;
+        }
+
       &-info {
         margin-bottom: 1.5rem;
         font-weight: 300;
@@ -313,17 +317,7 @@
     overflow-y: auto;
     overflow-x: hidden;
   }
-  .button-scroll-container::-webkit-scrollbar {
-    width: 1.3em;
-  }
-  .button-scroll-container::-webkit-scrollbar-track {
-    background-color: darken(desaturate($secondary-color, $amount: 70%), 20%);
-    border-radius: 10px;
-  }
-  .button-scroll-container::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #1ddde8;
-  }
+
 
   .substance-textures-select {
     display: flex;

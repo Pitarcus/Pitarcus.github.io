@@ -57,6 +57,7 @@
         outline-offset: 8px;
         outline-color: $secondary-color;
       }
+      // When being clicked
       &:active {
         outline-offset: 12px;
         transition:0s;
@@ -302,16 +303,66 @@
 
   .button-scroll-container {
     display: block;
-    margin-right: 0;
-    margin-left: 2%;
-    height: 100%;
+    margin-right: 5px;
+    margin-left: 1%;
+    margin-top: 5em;
+    padding: 3%;
+    padding-top: 0%;
+    height: 85%;
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .button-scroll-container::-webkit-scrollbar {
+    width: 1.3em;
+  }
+  .button-scroll-container::-webkit-scrollbar-track {
+    background-color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+    border-radius: 10px;
+  }
+  .button-scroll-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #1ddde8;
   }
 
   .substance-textures-select {
     display: flex;
+    background-color: transparent;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
+    margin-top: 20%;
+    margin-bottom: 30px;
+    padding: 10%;
+
+    font-size: 1.4em;
+    font-weight: 600;
+    text-transform: capitalize;
+   
+    color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+    border-radius: 10px;
+    outline-style: solid;
+    outline-offset: 4px;
+    outline-color: darken(desaturate($secondary-color, $amount: 70%), 20%);
+    border: none;
+    cursor: pointer;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
+    
+    &:hover {
+      outline-offset: 6px;
+      outline-color: $secondary-color;
+    }
+    &:active {
+      outline-offset: 10px;
+      transition:0s;
+      transition-timing-function: step-end;
+    }
+  }
+  .substance-textures-select.active {
+    color: $secondary-color;
+    outline-style: solid;
+    outline-color: $secondary-color;
+    outline-offset: 8px;
   }
 
   .model-viewer {
@@ -324,13 +375,63 @@
     border-radius: 15px;
   }
 
+  #model-load-button {
+    color: white;
+    border-radius: 6px;
+    display: inline-block;
+    padding: 10px 40px 9px 40px;
+    font-weight: 500;
+    font-size: large ;
+    box-shadow: 0 0 8px rgba(0,0,0,.2), 0 0 4px rgba(0,0,0,.25);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 100;
+  }
+
+  .model-preview-progress-bar {
+    display: block;
+    width: 33%;
+    height: 10%;
+    max-height: 2%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border-radius: 25px;
+    box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
+    border: 1px solid $secondary-color;
+    background-color: rgba(0, 0, 0, 1);
+  }
+
+  .model-preview-progress-bar.hide {
+    visibility: hidden;
+    transition: visibility 0;
+  }
+  .update-bar {
+    background-color: $dark-blue-text;
+    width: 0%;
+    height: 100%;
+    border-radius: 25px;
+    float: left;
+    transition: width 0.3s;
+  }
+
+
   /* The Close Button */
   .close {
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
-    padding-right: 2%;
+
+    vertical-align: middle;
+    display: inline-block;
+    padding: 4px 16px;
+    position: absolute;
+    right: 0;  
+    top: 0;
+
   }
 
   .close:hover,

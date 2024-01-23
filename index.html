@@ -233,37 +233,42 @@ Have fun creating your portfolio on this template!!! -->
           <div class="modal-content">
             
             <model-viewer class="model-viewer" 
-              environment-image="./assets/models/environments/spruit_sunrise_2k.hdr"  disable-pan 
-              oncontextmenu="return false;" src="./assets/models/Dirt_ground.glb" 
-              tone-mapping="commerce" shadow-intensity="1" camera-controls touch-action="pan-y" alt="A 3D model showcasing the textures">
+            environment-image="./assets/models/environments/spruit_sunrise_2k.hdr"  disable-pan 
+            oncontextmenu="return false;" src="./assets/models/Dirt_ground.glb" reveal="manual"
+            tone-mapping="commerce" shadow-intensity="1" camera-controls touch-action="pan-y" alt="A 3D model showcasing the textures">
+
+              <div id="model-load-button" slot="poster">Select a 3D model</div>
+              <div class="model-preview-progress-bar hide" slot="progress-bar">
+                <div class="update-bar"></div>
+              </div>
             </model-viewer>
-            <div class="button-scroll-container">
+            <aside class="button-scroll-container">
               <button 
               id="substance-model-dirt" target="_blank" 
-              class="cta-btn cta-btn--hero cta-btn--projects substance-textures-select" >
+              class="substance-textures-select" >
               Dirt
               </button>
               <button 
               id="substance-model-snow" target="_blank" 
-              class="cta-btn cta-btn--hero cta-btn--projects substance-textures-select" >
+              class="substance-textures-select" >
               Snow
               </button>
               <button 
               id="substance-model-sand" target="_blank" 
-              class="cta-btn cta-btn--hero cta-btn--projects substance-textures-select" >
+              class="substance-textures-select" >
               Sand
               </button>
               <button 
               id="substance-model-jaraflower" target="_blank" 
-              class="cta-btn cta-btn--hero cta-btn--projects substance-textures-select" >
+              class="substance-textures-select" >
               Jara Flower
               </button>
               <button 
               id="substance-model-bridge" target="_blank" 
-              class="cta-btn cta-btn--hero cta-btn--projects substance-textures-select" >
+              class="substance-textures-select" >
               Bridge
               </button>
-            </div>
+            </aside>
             <span class="close">&times;</span>
           </div>
 

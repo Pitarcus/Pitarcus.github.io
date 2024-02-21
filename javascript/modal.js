@@ -1,9 +1,98 @@
 // Get the modal
 var modal = document.getElementById("myModal");
 
-// Get the button that opens the modal
-var btn = document.getElementsByClassName("substance-textures");
+// Get all modals by order
+let modals = document.getElementsByClassName("modal");
 
+// Get the button that opens each modal add to the array in order of appearance
+var btn_everything = document.getElementsByClassName("everything-modal-button");
+var btn_substance = document.getElementsByClassName("substance-textures");
+
+let buttons = [btn_everything, btn_substance];  
+
+// Get the <span> element that closes the modal
+var closeButtons = document.getElementsByClassName("close");
+
+
+// When the user clicks on the button, open the needed modal
+buttons.forEach( ( button, index ) =>
+{
+  for (var j = 0; j < button.length; j++) {
+    button[j].onclick = function() {
+      modals[index].style.display = "block";
+      }
+    }
+});
+
+
+// When the user clicks on <span> (x), close the modal
+for(var i = 0; i < closeButtons.length; i++)
+{
+  closeButtons[i].onclick = function() {
+    for (var j = 0; j < modals.length; j++) {
+      modals[j].style.display = "none";
+    };
+  }
+};
+
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    for (var j = 0; j < modals.length; j++) {
+      if (event.target == modals[j]) {
+      modals[j].style.display = "none";
+    };
+  }
+}
+
+
+// Slideshow inside the modal
+let slideIndex = [1,1];
+let slideId = ["mySlides1", "mySlides2", "mySlides3"]
+let dotsId = ["slideDots1", "slideDots2"]
+showSlides(1, 0);
+//showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  let i;
+  let x = document.getElementsByClassName(slideId[no]);
+  let dots = document.getElementsByClassName(dotsId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "flex";  
+
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  dots[slideIndex[no]-1].className += " active";
+}
+
+
+var modelImages = document.getElementsByClassName("img-modal")
+
+// TODO replace foreach
+for (var i = 0; i < modelImages.length; i++) {
+  modelImages[i].addEventListener("click", function(event) {
+    var target = event.target;
+    if(target.className.includes("active")) {
+      target.className = target.className.replace(" active", "");
+      
+    }
+    else {
+      target.className += " active";
+    }
+  })
+};
+
+
+// -- 3D MODEL VIEWER MODAL PAGE FUNCTIONALITY --
 var modelViewer = document.getElementsByClassName("model-viewer")[0];
 
 var dirtModel = document.getElementById("substance-model-dirt");
@@ -11,30 +100,9 @@ var snowModel = document.getElementById("substance-model-snow");
 var sandModel = document.getElementById("substance-model-sand");
 var jaraModel = document.getElementById("substance-model-jaraflower");
 var bridgeModel = document.getElementById("substance-model-bridge");
+var tileswithgrassModel = document.getElementById("substance-model-tileswithgrass");
 
-let models = [dirtModel, snowModel, sandModel, jaraModel, bridgeModel];
-
-// Get the <span> element that closes the modal
-var closeButton = document.getElementsByClassName("close")[0];
-
-// When the user clicks on the button, open the modal
-for (var i = 0; i < btn.length; i++) {
-    btn.item(i).onclick = function() {
-        modal.style.display = "block";
-      }
-}
-
-// When the user clicks on <span> (x), close the modal
-closeButton.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+let models = [dirtModel, snowModel, sandModel, tileswithgrassModel, jaraModel, bridgeModel];
 
 // -- MODEL SELECTION BUTTONS --
 // User clicks one of the model selection buttons
@@ -52,6 +120,9 @@ jaraModel.onclick = function() {
 }
 bridgeModel.onclick = function() {
   modelViewer.src = "./assets/models/Bridge.glb"
+}
+tileswithgrassModel.onclick = function() {
+  modelViewer.src = "./assets/models/Tileswithgrass.glb"
 }
 
 models.forEach(element => {

@@ -206,20 +206,21 @@ Have fun creating your portfolio on this template!!! -->
                   class="cta-btn cta-btn--hero cta-btn--projects"
                   >See Live</a
                 >-->
-                <a href="https://pitarcus.itch.io/everything-everywhere-on-a-roll" 
+                <a
                 target="_blank" 
-                class="cta-btn cta-btn--hero cta-btn--projects">
-                itch.io
+                class="cta-btn cta-btn--hero cta-btn--projects everything-modal-button">
+                Read More
                 </a>
-                <a href="https://github.com/Pitarcus/UJI-Game-Jam-24/blob/main/Assets/_Scripts/UI/UIAnimator.cs" target="_blank" class="cta-btn text-color-main"
-                  >UI Animator Script</a
+                <a href="https://pitarcus.itch.io/everything-everywhere-on-a-roll" target="_blank" class="cta-btn text-color-main">
+                  Itch.io</a
                 >
               </div>
             </div>
 
             <div class="project-wrapper__image">
-              <a href="https://pitarcus.itch.io/everything-everywhere-on-a-roll" target="_blank" rel="noopener noreferrer">
-                <div class="thumbnail rounded">
+              <!-- <a href="https://pitarcus.itch.io/everything-everywhere-on-a-roll" target="_blank" rel="noopener noreferrer"> -->
+              <a href="_blank" target="_blank" rel="noopener noreferrer"></a>
+                <div class="thumbnail rounded everything-modal-button">
                   <img
                     src="./assets/EEOAR_screenshot.png"
                     class="img-fluid"
@@ -236,6 +237,141 @@ Have fun creating your portfolio on this template!!! -->
                   />
                 </div>
               </a>
+            </div>
+            <!-- THE MODAL -->
+            <div id="everythingModal" class="modal">
+            <!-- Modal content -->
+              <div class="modal-content">
+                <div class="modal-page mySlides1">
+                  <img
+                  src="./assets/Everything_movementscript.png"
+                  class="img-modal"
+                  alt="Project Image"
+                  width="1366"
+                  height="767"
+                  />
+                  <div class="modal-text-wrapper">
+                    <p>
+                    The movement was created using an scalable 3rd person physics controller I had developed previously.
+                    The camera controls were also created previously and use Cinemachine's FreeLook Camera.
+                    </p>
+                    <p>
+                      The main mechanic of sticking objects to the ball is pretty simple and uses a leveling system to
+                      allow or deny the player sticking certain objects.
+                    </p>
+                    <p>
+                      You can check some of the most notable scripts here:
+                    </p>
+                    <a href="https://github.com/Pitarcus/UJI-Game-Jam-24/blob/main/Assets/_Scripts/Movement/PlayerMovement.cs"
+                    class="cta-btn text-color-main"target="_blank">
+                      PlayerMovement
+                    </a>
+                    <a href="https://github.com/Pitarcus/UJI-Game-Jam-24/tree/main/Assets/_Scripts/DayNightCycle"
+                    class="cta-btn text-color-main"target="_blank">
+                      Day/Night Cycle
+                    </a>
+                    <a href="https://github.com/Pitarcus/UJI-Game-Jam-24/blob/main/Assets/_Scripts/UI/UIAnimator.cs"
+                    class="cta-btn text-color-main"target="_blank">
+                      UIAnimator
+                    </a>
+                    <a href="https://github.com/Pitarcus/UJI-Game-Jam-24/blob/main/Assets/_Scripts/Common/TweenPostProcess.cs"
+                    class="cta-btn text-color-main"target="_blank">
+                      PostprocessTweener
+                    </a>
+                  </div>           
+                </div>
+                <div  class="modal-page mySlides1">
+                  <img
+                  src="./assets/everything_assets_blender.png"
+                  class="img-modal"
+                  alt="Project Image"
+                  width="1366"
+                  height="767"
+                  />
+                  <div class="modal-text-wrapper">
+                    <p>
+                    All of the assets where modeled or modified in <b>Blender</b>, taking into account the scale between them and the player, 
+                    making it a 10:1 scale for a character that is 2cm tall.
+                    </p>
+                    <p>
+                      I made sure the downloaded models (pine cone, phone, and key) have a free personal and commercial license.
+                      Also, reduced tri-count and left the UVs to Substance Painter.
+                      </p>
+                  </div>
+                </div>             
+                
+                <div class="modal-page mySlides1">
+                  <img
+                  src="./assets/everything_assets_painter.png"
+                  class="img-modal"
+                  alt="Project Image"
+                  width="1366"
+                  height="767"
+                  />
+                  <div class="modal-text-wrapper">
+                    <p>
+                    They were then textured inside Substance Painter for the swiftest pipeline effort. The UVs are handled by Substance
+                    which is not ideal, but it cut a lot of time.
+                    </p>
+                  </div>           
+                </div>
+
+                <div class="modal-page mySlides1">
+                  <img
+                  src="./assets/everything_assets_unity.png"
+                  class="img-modal"
+                  alt="Project Image"
+                  width="1366"
+                  height="767"
+                  />
+                  <div class="modal-text-wrapper">
+                    <p>
+                    Finally, they are assembled into different prefabs so instancing them in the world is optimzed and easy using Polybrush.
+                    They use a free <a href="https://assetstore.unity.com/packages/vfx/shaders/urp-toon-shader-259777">Toon Shader</a> and also
+                    a <b>custom stylized plastic shader</b> that I created for the bottle and pen materials.
+                    </p>
+                  </div>           
+                </div>
+
+                <div class="modal-page mySlides1">
+                  <img
+                  src="./assets/everything_environment_unity.png"
+                  class="img-modal"
+                  alt="Project Image"
+                  width="1366"
+                  height="767"
+                  />
+                  <div class="modal-text-wrapper">
+                    <p>
+                    The environment has been modelled and UV unwrapped in Blender and painted in Substance Painter, using default and 
+                    customs materials that I have created in Designer.
+                    The trees have been generated using TreeIt, the free vegetation generation tool.
+                    </p>
+                    <p>
+                    The main lit shader for URP is used for all of the objects, with the Unity URP preset for exporting textures in Painter.
+                    The water shader was created for 'Blue Blood' and has been reused here. A custom subsurface scattering subgraph 
+                    developed for Wild Foliage (my grass and vegetation system) and a wind subgraph (global wind) from the same project
+                    is used on the tree leaves.
+                    </p>
+                  </div>           
+                </div>
+
+                <!-- Buttons for slideshow-->
+                <div class="left-modal-button">
+                  <a class="fa-solid fa-chevron-left prev-hover" style="color:rgb(85, 236, 237);" onclick="plusSlides(-1, 0)"></a>
+                </div>
+                <div class="right-modal-button">
+                  <a class="fa-solid fa-chevron-right next-hover" style="color:rgb(85, 236, 237);" onclick="plusSlides(1, 0)"></a>
+                </div>
+                  <!-- The dots/circles -->
+                <div class="slideDots" style="text-align:center">
+                  <span class="dot slideDots1" ></span>
+                  <span class="dot slideDots1"></span>
+                  <span class="dot slideDots1"></span>   
+                  <span class="dot slideDots1"></span>  
+                  <span class="dot slideDots1"></span>    
+              </div>
+              <span class="close">&times;</span>
             </div>
           </article>
           <!-- /END Project -->
@@ -329,6 +465,11 @@ Have fun creating your portfolio on this template!!! -->
               id="substance-model-sand" target="_blank" 
               class="substance-textures-select" >
               Sand
+              </button>
+              <button 
+              id="substance-model-tileswithgrass" target="_blank" 
+              class="substance-textures-select" >
+              Tiles with grass
               </button>
               <button 
               id="substance-model-jaraflower" target="_blank" 
@@ -670,7 +811,7 @@ Have fun creating your portfolio on this template!!! -->
           <!-- /END Project -->
 
           <!-- Hen & FOX -->
-          <article class="row project-item">
+          <!-- <article class="row project-item">
             <div class="project-wrapper__text">
               <h3 class="project-wrapper__text-title">Hen & Fox - 2020</h3>
 
@@ -710,7 +851,7 @@ Have fun creating your portfolio on this template!!! -->
                 </div>
               </a>
             </div>
-          </article>
+          </article> -->
           <!-- /END Project -->
 
         </div>

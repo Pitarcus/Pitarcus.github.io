@@ -33,7 +33,7 @@
     &__filters-category {
       width: 100%;
       align-self: center;
-      padding: 3em;
+      padding: 2em;
     }
     
     .project-filter {
@@ -41,7 +41,7 @@
       font-size: 2em;
       font-weight: 700;
       text-transform: capitalize;
-      margin: 0 12px;
+      margin: 0 12px 18px;
       color: darken(desaturate($secondary-color, $amount: 70%), 20%);
       border-radius: 10px;
       outline-style: solid;
@@ -307,6 +307,12 @@
       position: relative;
       display: flex;
       width: 100%;
+
+      @include respond(phone) { 
+      align-items:center;
+      justify-content: center;
+      flex-wrap: wrap;
+      }
     }
 
     .modal-text-wrapper { 
@@ -318,8 +324,20 @@
       margin-left: 5%;
       margin-right: 5%;
       
+      overflow: hidden;
+
       width: 50%;
-      height: 60%;
+      height: 70%;
+
+      @include respond(phone) { 
+        text-align: center;
+        margin : 0;
+        width: 80%;
+        height: 35%;
+      }
+
+      p {font-size: 1.8vmin;}
+      a {font-size: 1.8vmin;}
     }
 
     .img-modal {
@@ -344,6 +362,13 @@
 
       &:hover {
         outline-offset: 8px;
+      }
+
+      @include respond(phone) { 
+        margin : 0;
+        margin-top: 5%;
+        width: 80%;
+        height: 50%;
       }
 
     }

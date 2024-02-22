@@ -307,9 +307,10 @@
       position: relative;
       display: flex;
       width: 100%;
+      overflow: hidden;
 
       @include respond(phone) { 
-      align-items:center;
+      //align-items:center;
       justify-content: center;
       flex-wrap: wrap;
       }
@@ -323,21 +324,29 @@
       margin-bottom: auto;
       margin-left: 5%;
       margin-right: 5%;
-      
-      overflow: hidden;
+
+      font-size: 2vmin;
+
+      overflow-y:auto;
+      padding-right: 5px;
+      padding-left: 5px;
 
       width: 50%;
       height: 70%;
 
       @include respond(phone) { 
-        text-align: center;
+        //text-align: center;
         margin : 0;
         width: 80%;
-        height: 35%;
+        height: 40%;
+
+        margin-top: -15%;
+
+        font-size: large;
       }
 
-      p {font-size: 1.8vmin;}
-      a {font-size: 1.8vmin;}
+      /* p {font-size: 2vmin;}
+      a {font-size: 2vmin;} */
     }
 
     .img-modal {
@@ -367,8 +376,8 @@
       @include respond(phone) { 
         margin : 0;
         margin-top: 5%;
-        width: 80%;
-        height: 50%;
+        width: 60%;
+        height: 40%;
       }
 
     }
@@ -586,6 +595,7 @@
     position: absolute;
     right: 0;  
     top: 0;
+    margin-top: 0;
 
   }
 

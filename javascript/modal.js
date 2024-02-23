@@ -6,9 +6,10 @@ let modals = document.getElementsByClassName("modal");
 
 // Get the button that opens each modal add to the array in order of appearance
 var btn_everything = document.getElementsByClassName("everything-modal-button");
+var btn_grass = document.getElementsByClassName("grass-modal-button");
 var btn_substance = document.getElementsByClassName("substance-textures");
 
-let buttons = [btn_everything, btn_substance];  
+let buttons = [btn_everything, btn_substance, btn_grass];  
 
 // Get the <span> element that closes the modal
 var closeButtons = document.getElementsByClassName("close");
@@ -51,7 +52,7 @@ let slideIndex = [1,1];
 let slideId = ["mySlides1", "mySlides2", "mySlides3"]
 let dotsId = ["slideDots1", "slideDots2"]
 showSlides(1, 0);
-//showSlides(1, 1);
+showSlides(1, 1);
 
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);
@@ -77,7 +78,6 @@ function showSlides(n, no) {
 
 var modelImages = document.getElementsByClassName("img-modal")
 
-// TODO replace foreach
 for (var i = 0; i < modelImages.length; i++) {
   modelImages[i].addEventListener("click", function(event) {
     var target = event.target;

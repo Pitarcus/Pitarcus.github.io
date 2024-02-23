@@ -326,8 +326,8 @@ Have fun creating your portfolio on this template!!! -->
                   />
                   <div class="modal-text-wrapper">
                     <p>
-                    Finally, they are assembled into different prefabs so instancing them in the world is optimzed and easy using Polybrush.
-                    They use a free <a href="https://assetstore.unity.com/packages/vfx/shaders/urp-toon-shader-259777">Toon Shader</a> and also
+                    Finally, they are assembled into different prefabs so instancing them in the world is optimized and easy using Polybrush.
+                    They use a free <a target="_blank" href="https://assetstore.unity.com/packages/vfx/shaders/urp-toon-shader-259777">Toon Shader</a> and also
                     a <b>custom stylized plastic shader</b> that I created for the bottle and pen materials.
                     </p>
                   </div>           
@@ -370,8 +370,9 @@ Have fun creating your portfolio on this template!!! -->
                   <span class="dot slideDots1"></span>   
                   <span class="dot slideDots1"></span>  
                   <span class="dot slideDots1"></span>    
+                </div>
+                <span class="close">&times;</span>
               </div>
-              <span class="close">&times;</span>
             </div>
           </article>
           <!-- /END Project -->
@@ -523,19 +524,19 @@ Have fun creating your portfolio on this template!!! -->
                   class="cta-btn cta-btn--hero cta-btn--projects"
                   >See Live</a
                 >-->
-                <a href="https://github.com/Pitarcus/Grass-FDP-2023" 
+                <a
                 target="_blank" 
-                class="cta-btn cta-btn--hero cta-btn--projects">
-                Source Code
+                class="cta-btn cta-btn--hero cta-btn--projects grass-modal-button">
+                Read More
                 </a>
-                <a href="https://twitter.com/pitarcus/media" target="_blank" class="cta-btn text-color-main"
-                  >Twitter Posts</a
+                <a href="https://www.youtube.com/watch?v=syXk2TzY0O4&ab_channel=VideojuegosUJI" target="_blank" class="cta-btn text-color-main"
+                  >Video Trailer</a
                 >
               </div>
             </div>
 
-            <div class="project-wrapper__image">
-              <a href="https://github.com/Pitarcus/Grass-FDP-2023" target="_blank" rel="noopener noreferrer">
+            <div class="project-wrapper__image grass-modal-button">
+              <a  target="_blank" rel="noopener noreferrer">
                 <div class="thumbnail rounded">
                   <img
                     src="./assets/sssDemo.png"
@@ -554,6 +555,145 @@ Have fun creating your portfolio on this template!!! -->
                 </div>
               </a>
             </div>
+
+            <!-- THE MODAL -->
+            <div id="grassModal" class="modal">
+              <!-- Modal content -->
+                <div class="modal-content">
+                  <div class="modal-page mySlides2">
+                    <img
+                    src="./assets/Bike in scenery4.png"
+                    class="img-modal"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                    />
+                    <div class="modal-text-wrapper">
+                      <p>
+                      My Bachelor's Thesis was centered around making an optimized and useful grass tool. Taking into consideration the best 
+                      looking grass in videogames (<i>Breath of the Wild</i> and <i>Ghost of Tsushima </i>come to mind), they use model based blades, so 
+                      that is what I wanted to achieve. 
+                      </p>
+                      <p>
+                        In these slides we will take an overview of the system, but a thorough explanation can be found in my
+                      thesis' report.
+                      </p>
+                      <a href="https://repositori.uji.es/xmlui/handle/10234/203373"
+                      class="cta-btn text-color-main"target="_blank">
+                        Bachelor Thesis
+                      </a>
+                      <p>
+                       Also, some of the work and some short videos of the progress can be found in my twitter account.
+                      </p>
+                      <a href="https://twitter.com/pitarcus/media"
+                      class="cta-btn text-color-main"target="_blank">
+                        Twitter Account
+                      </a>
+                    </div>           
+                  </div>
+                  <div  class="modal-page mySlides2">
+                    <img
+                    src="./assets/gpuoptimization.png"
+                    class="img-modal"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                    />
+                    <div class="modal-text-wrapper">
+                      <p>
+                      Learning GPU Instancing in Unity and Compute Shaders, I was able to achieve a flexible grass rendering system 
+                      that scales well thanks to optimizations (world partitioning using a quadtree and frustum culling) and is highly customizable.
+                      The system is used in my Jam game <i>'Everything, Everywhere, On a Roll!'</i> and people have not reported problems with the grass yet!
+                      </p>
+                      <p>
+                       As one of the current focus of the project is making it as user friendly as possible, I am working on streamlining the 
+                       use of the plugin: creating prefabs, fixing editor bugs and organizing the project's folders.
+                      Here is a link to the repository of the plugin:
+                      </p>
+                      <a href="https://github.com/Pitarcus/Grass-FDP-2023/tree/main/Assets/WildFoliagePlugin"
+                      class="cta-btn text-color-main"target="_blank">
+                        Repository
+                      </a>
+                    </div>
+                  </div>             
+                  
+                  <div class="modal-page mySlides2">
+                    <img
+                    src="./assets/grass_shader.png"
+                    class="img-modal"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                    />
+                    <div class="modal-text-wrapper">
+                      <p>
+                      Another focus of this project was making the grass look appealing, so a complex vertex and fragment shader had to be developed.
+                      This was achieved using Shader Graph, which offers the opportunity to create modular pieces that can be linked together, reused
+                      and improved separately, which is amazing! 
+                      </p>
+                      <p>
+                        The vertex shader features static wind (general wind), dynamic wind; rotation, scale, bend and their randomizations; 
+                        object displacement and camera awareness so the view is not obstructed.
+                        </p>
+                        <p>
+                          The fragment shader uses parameterized colors for the top and the bottom of the blade, a texture for color variation of the tip
+                          and fake subsurface scattering to make it look more alive.
+                          </p>
+                    </div>           
+                  </div>
+  
+                  <div class="modal-page mySlides2">
+                    <img
+                    src="./assets/grass_staticwindmaster.png"
+                    class="img-modal"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                    />
+                    <div class="modal-text-wrapper">
+                      <p>
+                        The 'static' wind (general wind) works in a global scope and affects all shaders that use the static wind module (or the global shader variable).
+                         This way we can have a coherent wind that can be sampled by any object in the scene! It is also modifiable and customizable.
+                      </p>
+                    </div>           
+                  </div>
+                  <div class="modal-page mySlides2">
+                    <img
+                    src="./assets/fluidsim_debug1.png"
+                    class="img-modal"
+                    alt="Project Image"
+                    width="1366"
+                    height="767"
+                    />
+                    <div class="modal-text-wrapper">
+                      <p>
+                      The dynamic wind uses a fluid simulation that is computed in an enclosed space around the player. The current 
+                      implementation is not 100% accurate nor fully optimized, but it works in a good enough way on high end devices. It 
+                      is also modular and can be added to any other shader in shader graph thanks to a dynamic wind master.
+                      </p>
+                    </div>           
+                  </div>
+
+  
+                  <!-- Buttons for slideshow-->
+                  <div class="left-modal-button">
+                    <a class="fa-solid fa-chevron-left prev-hover" style="color:rgb(85, 236, 237);" onclick="plusSlides(-1, 1)"></a>
+                  </div>
+                  <div class="right-modal-button">
+                    <a class="fa-solid fa-chevron-right next-hover" style="color:rgb(85, 236, 237);" onclick="plusSlides(1,1)"></a>
+                  </div>
+                    <!-- The dots/circles -->
+                  <div class="slideDots" style="text-align:center">
+                    <span class="dot slideDots2" ></span>
+                    <span class="dot slideDots2"></span>
+                    <span class="dot slideDots2"></span>   
+                    <span class="dot slideDots2"></span>  
+                    <span class="dot slideDots2"></span>    
+                  </div>
+                  <span class="close">&times;</span>
+                </div>
+              </div>
+
           </article>
           <!-- /END Project -->
 

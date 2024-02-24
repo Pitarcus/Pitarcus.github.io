@@ -8,8 +8,11 @@ let modals = document.getElementsByClassName("modal");
 var btn_everything = document.getElementsByClassName("everything-modal-button");
 var btn_grass = document.getElementsByClassName("grass-modal-button");
 var btn_substance = document.getElementsByClassName("substance-textures");
+var btn_pitarcus = document.getElementsByClassName("pitarcus-modal-button");
 
-let buttons = [btn_everything, btn_substance, btn_grass];  
+// Button should be added in the order of appeareance in the page
+let buttons = [btn_everything, btn_substance, btn_grass, btn_pitarcus];  
+
 
 // Get the <span> element that closes the modal
 var closeButtons = document.getElementsByClassName("close");
@@ -48,11 +51,25 @@ window.onclick = function(event) {
 
 
 // Slideshow inside the modal
-let slideIndex = [1,1];
-let slideId = ["mySlides1", "mySlides2", "mySlides3"]
-let dotsId = ["slideDots1", "slideDots2"]
+let slideIndex = [1,1,1,1,1,1,1,1,1,1,1];
+let slideNumber = 4;
+let slideId = [];
+let dotsId = [];
+
+InitSlideIds();
 showSlides(1, 0);
 showSlides(1, 1);
+showSlides(1, 2);
+
+function InitSlideIds() {
+  for(let i = 0; i < slideNumber; i++) 
+  {
+    let id = i + 1;
+    slideId.push("mySlides".concat(id.toString()));
+    //console.log(slideId);
+    dotsId.push("slideDots".concat(id.toString()));
+  }
+}
 
 function plusSlides(n, no) {
   showSlides(slideIndex[no] += n, no);

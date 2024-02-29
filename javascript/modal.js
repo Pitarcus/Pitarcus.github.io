@@ -51,23 +51,28 @@ window.onclick = function(event) {
 
 
 // Slideshow inside the modal
-let slideIndex = [1,1,1,1,1,1,1,1,1,1,1];
+let slideIndex = [];
 let slideNumber = 4;
 let slideId = [];
 let dotsId = [];
 
 InitSlideIds();
-showSlides(1, 0);
+/* showSlides(1, 0);
 showSlides(1, 1);
-showSlides(1, 2);
+showSlides(1, 2); */
 
 function InitSlideIds() {
+  slideNumber = modals.length -1;
+  console.log(slideNumber);
   for(let i = 0; i < slideNumber; i++) 
   {
     let id = i + 1;
+    slideIndex.push(1);
     slideId.push("mySlides".concat(id.toString()));
     //console.log(slideId);
     dotsId.push("slideDots".concat(id.toString()));
+
+    showSlides(1, i);
   }
 }
 
